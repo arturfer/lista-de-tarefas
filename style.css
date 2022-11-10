@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to right top, #a0a1f5, #a59bfa, #ad93fd, #b78bff, #c281ff);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    height: 100vh;
+    
+    
+}
+
+main .todo-list input {
+    box-sizing: border-box;
+    height: 28px;
+    border-radius: .25rem;
+    width: 60%;
+    border: 1px solid lightgrey;
+    margin-top: 32px;
+    
+}
+
+
+
+main button {
+    background-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 28px;
+    border-radius: .25rem;
+    color: #fff;
+}
+
+main button:hover {
+    opacity: 0.8;
+}
+
+main button.add {
+    background-color: #6820bb;
+    border: 1px solid  #6820bb;
+    margin-left: 5px;
+}
+
+main button.clear {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    display: block;
+    margin: auto;
+}
+
+main button:focus {
+    outline:0;
+}
+
+main > section.todo-list h3 {
+    text-align: center;
+    margin-top: 24px;
+    width: 100%;
+    color: white;
+}
+
+
+main > section.todo-list {
+
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 500px;
+    min-width: 300px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    
+}
+main .all-todos {
+    overflow: auto;
+    max-height: 250px;
+}
+main .all-todos .single-todo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+}
+
+main .all-todos .single-todo p {
+    max-width: 100%;
+    margin: 12px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(132, 0, 255);
+    
+}
+
+main .all-todos .single-todo p:hover {
+    text-decoration: line-through;
+}
+
+main .all-todos .single-todo.done p {
+    text-decoration: line-through;
+}
+
+main .all-todos .single-todo button.remove {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background: transparent url('img/remove.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+main > section.todo-list button.clear {
+
+    margin-top: 24px;
+}
+
+div.instructions {
+    font-size: 12px;
+    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    /* text-shadow: 2px 2px 2px rgba(78, 60, 92, 0.541); */
+    font-weight: bold ;
+}
+
+div.instructions ul {
+    list-style: inside;
+    text-align: center;
+    padding: 0;
+    
+}
+
+div.instructions ul li {
+
+    margin: 4px auto;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+.delete{
+    width: 15px;
+    height: 15px;
+    opacity: 0.5;
+
+}
+
+.delete:hover {
+    opacity: 1;
+}
+.input{
+    padding-left: 5%;
+}
+
+.input:focus::-webkit-input-placeholder {
+    color: transparent;
+ }
+ .input:focus:-moz-placeholder { /* Firefox 18- */
+    color: transparent;  
+ }
+ .input:focus::-moz-placeholder {  /* Firefox 19+ */
+    color: transparent;  
+ }
+ .input:focus:-ms-input-placeholder {  
+    color: transparent;  
+ }
+
+ main .all-todos::-webkit-scrollbar {
+    width: 12px;
+}
+
+main .all-todos::-webkit-scrollbar-track {
+
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.39);
+   
+}
+
+main .all-todos::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #BFA7FE;
+    box-shadow: inset 0 0 2px white;
+
+}
